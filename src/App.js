@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import WeatherNotify from './WeatherNotify';
 import Input from './Input';
+import Image from './Image';
 
 
 
@@ -39,7 +40,9 @@ function App() {
         outlet={outlet}
         fetchItem={fetchItem}
       />
-     
+      
+      <Image />
+
      <WeatherNotify 
         outlet={outlet}
       />
