@@ -6,8 +6,8 @@
 body{
     background-image: url('https://images.pexels.com/photos/358238/pexels-photo-358238.jpeg?auto=compress&cs=tinysrgb&w=600');
     background-repeat: no-repeat;
-    background-size:100%;
-    box-shadow: inset 30px 1px 100px black;
+    background-position: center;
+    background-size:cover;
 }
 /* this is total box (blur box)*/
 .input-city-name{
@@ -170,7 +170,6 @@ input::placeholder{
         background-repeat: no-repeat;
         background-position: center;
         background-size:cover;  
-        box-shadow: inset 30px 1px 100px black;
     }
     /* this is total box (blur box)*/
     .input-city-name{
