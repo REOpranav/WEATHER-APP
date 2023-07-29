@@ -8,13 +8,14 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
+    height:100vh;
 }
 /* this is total box (blur box)*/
 .input-city-name{
     text-align: center;
     width: 35%;
     margin-left: auto;
-    height: cover;
+    height: 100vh;
     backdrop-filter: blur(10px);
     background-color: rgba(0,0,0,0.2);
     border-radius: 20px;
@@ -169,7 +170,7 @@ input::placeholder{
         background-image: url('https://media.istockphoto.com/id/1250041285/photo/overhead-aerial-view-of-winding-mountain-road-inside-colorful-autumn-forest.jpg?b=1&s=612x612&w=0&k=20&c=uHNT4xNHf2t-1ayZcWt_vx1_xJzSFXZgg2yyNwp6hfg=');
         background-repeat: no-repeat;
         background-position: center;
-        background-size:cover;  
+        background-size:100%;  
     }
     /* this is total box (blur box)*/
     .input-city-name{
