@@ -73,10 +73,12 @@ input::placeholder{
 .weather-notify h1{
     font-size: 6rem;
     margin-right:2rem;
-    font-family: 'Dai Banna SIL', serif;
+    font-family: 'Tektur', cursive;
+    color: white
+
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Raleway:wght@100&family=Tektur:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dai+Banna+SIL:wght@500&family=Dangrek&display=swap');
 .weather-notify p {
     text-align: center;
@@ -85,8 +87,7 @@ input::placeholder{
 }
 
 .weather-notify{
-    color: white;
-    margin-left: 5rem;
+    margin-left: 13rem;
     text-transform: capitalize;
     font-size: xx-large;
     display: flexbox;
@@ -95,9 +96,7 @@ input::placeholder{
     text-align:right;
     width: max-content;
     justify-content: center;
-    border-bottom: 1px solid white;
     text-shadow: 10px 10px 10px black;
-
 }
 
 /* weather-details [ js code available in input componenerts] */
@@ -159,6 +158,31 @@ input::placeholder{
     margin-left: 11rem;
 }
 
+.image{
+    width: 20rem;
+    margin-top: -100rem;
+    margin-left: 10rem;
+    margin-bottom: 11rem;
+    filter: drop-shadow( 5px -5px 40px skyblue);
+}
+
+/* rotating the earth  */
+
+@media (prefers-reduced-motion: no-preference) {
+    .image {
+      animation: image infinite 20s linear;
+    }
+  }
+
+ @keyframes image {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+ }
+ 
 /* this is for mobile view */
 @media (max-width: 767px) {
     *{
