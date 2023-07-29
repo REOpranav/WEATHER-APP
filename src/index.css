@@ -6,7 +6,6 @@
 body{
     background-image: url('https://images.pexels.com/photos/358238/pexels-photo-358238.jpeg?auto=compress&cs=tinysrgb&w=600');
     background-repeat: no-repeat;
-    background-position: center;
     background-size:100%;
     box-shadow: inset 30px 1px 100px black;
 }
