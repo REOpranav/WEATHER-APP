@@ -8,7 +8,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
-    height: 100vh;    
     box-shadow: inset 30px 1px 100px black;
 }
 /* this is total box (blur box)*/
@@ -172,7 +171,6 @@ input::placeholder{
         background-repeat: no-repeat;
         background-position: center;
         background-size:cover;  
-        height: 100vh;    
         box-shadow: inset 30px 1px 100px black;
     }
     /* this is total box (blur box)*/
