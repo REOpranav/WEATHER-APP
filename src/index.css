@@ -9,6 +9,7 @@ body{
     background-position: center;
     background-size:cover;
     height: 100vh;
+    backdrop-filter:blur(4px) ;
 }
 /* this is total box (blur box)*/
 .input-city-name{
@@ -16,8 +17,8 @@ body{
     width: 35%;
     margin-left: auto;
     height: 100vh;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(40px);
+    background-color: rgba(0,0,0,0.5);
     border-radius: 20px;
 }
 
@@ -160,8 +161,10 @@ input::placeholder{
     margin-top: -30rem;
     margin-left: 15rem;
     margin-bottom: 13rem;
-    filter: drop-shadow( 5px -5px 40px skyblue);
+    filter: drop-shadow( 10px -10px 40px black);
     display: inline-block;
+
+
 }
 
 /* rotating the earth  */
