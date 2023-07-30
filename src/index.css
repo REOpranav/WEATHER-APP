@@ -8,7 +8,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
-    height:100vh;
+    height: 100vh;
 }
 /* this is total box (blur box)*/
 .input-city-name{
@@ -74,12 +74,13 @@ input::placeholder{
     font-size: 6rem;
     margin-right:2rem;
     font-family: 'Tektur', cursive;
-    color: white
+    color:white;
 
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Raleway:wght@100&family=Tektur:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dai+Banna+SIL:wght@500&family=Dangrek&display=swap');
+
 .weather-notify p {
     text-align: center;
     justify-content: center;
@@ -87,7 +88,7 @@ input::placeholder{
 }
 
 .weather-notify{
-    margin-left: 13rem;
+    margin-left: 14rem;
     text-transform: capitalize;
     font-size: xx-large;
     display: flexbox;
@@ -155,11 +156,12 @@ input::placeholder{
 }
 
 .image{
-    width: 20rem;
-    margin-top: -100rem;
-    margin-left: 10rem;
-    margin-bottom: 11rem;
+    width: 11rem;
+    margin-top: -30rem;
+    margin-left: 15rem;
+    margin-bottom: 13rem;
     filter: drop-shadow( 5px -5px 40px skyblue);
+    display: inline-block;
 }
 
 /* rotating the earth  */
@@ -190,7 +192,8 @@ input::placeholder{
         background-image: url('https://media.istockphoto.com/id/1250041285/photo/overhead-aerial-view-of-winding-mountain-road-inside-colorful-autumn-forest.jpg?b=1&s=612x612&w=0&k=20&c=uHNT4xNHf2t-1ayZcWt_vx1_xJzSFXZgg2yyNwp6hfg=');
         background-repeat: no-repeat;
         background-position: center;
-        background-size:100%;  
+        background-size:100%; 
+        height: 100; 
     }
     /* this is total box (blur box)*/
     .input-city-name{
@@ -318,28 +321,50 @@ input::placeholder{
     /* this is class span tag [for move right of the box ]  */
     .span-one{
         color: orange;
-        padding: 10px;
         margin-left: 10rem;
     
     }
     .span-two{
         color: orange;
-        padding: 10px;
         margin-left: 12rem;
     
     }
     
     .span-three{
         color: orange;
-        padding: 10px;
         margin-left: 10rem;
     
     }
     .span-four{
         color: orange;
-        padding: 10px;
         margin-left: 11rem;
     }
 
     
 }
+
+.image{
+    width: 11rem;
+    margin-top: -30rem;
+    margin-left: 15rem;
+    margin-bottom: 13rem;
+    filter: drop-shadow( 5px -5px 40px skyblue);
+    display: inline-block;
+}
+
+/* rotating the earth  */
+
+@media (prefers-reduced-motion: no-preference) {
+    .image {
+      animation: image infinite 20s linear;
+    }
+  }
+
+ @keyframes image {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+ }
