@@ -10,7 +10,7 @@ const Input = ({handleSubmit,fetchItem,city,setCity,outlet}) => {
           id='city'    
           value= {city}
           onChange={(e)=>setCity(e.target.value)}  
-          placeholder='Anothor Name '      
+          placeholder='Enter city Name '      
       />
 
         <button
