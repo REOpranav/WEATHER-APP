@@ -5,12 +5,15 @@ const WeatherNotify = ({outlet}) => {
     
   return (
     
-        <div className='weather-notify'>
+        <div>
           {outlet  && 
               <h1>{outlet ? outlet.main.temp.toFixed():null}°C </h1>  
-            }     
+            }  
+               
         </div>
-   
+        
+        
+      
   )
 }
 

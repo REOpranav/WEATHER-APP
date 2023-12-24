@@ -1,55 +1,71 @@
-import './App.css';
-import axios from 'axios';
-import React, { useState } from 'react'
-import WeatherNotify from './WeatherNotify';
-import Input from './Input';
-import Image from './Image';
-
-
+import "./App.css";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import Input from "./Input";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
-  const key = 'e7a5e6824ab7d08351501ac5e7ba440b'  ;
+  const key = "e7a5e6824ab7d08351501ac5e7ba440b";
 
-  const [city,setCity] = useState('')
+  const [city, setCity] = useState(""); // this code for set city
 
-  const [outlet,setOutlet]=useState('')
-  
-  const fetchItem = async()=>{
-     try {
-        const responce = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`)
-        setOutlet(responce.data)
-        console.log(responce.data)
+  const [outlet, setOutlet] = useState(""); // this is for getting data from input
 
-      } catch (err) {
-        alert("Plse Enter Proper City Name")
-     }
-  }
+  const fetchItem = async () => {
+    //using axios method
+    try {
+      const responce = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`
+      );
+      setOutlet(responce.data); // ste that data in setoutlet variable
+    } catch (err) {
+      alert("plse enter city name properly");
+    }
+  };
 
-  const handleSubmit = (e)=>{ 
-    e.preventDefault()
-    setCity('')
-} 
+  const [currentDay, setCurrentDay] = useState(""); // this variable for current day
+
+  //use useeffect for finding day
+  useEffect(() => {
+    const getCurrentDay = () => {
+      const daysOfWeek = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const today = new Date();
+      const dayIndex = today.getDay();
+      return daysOfWeek[dayIndex];
+    };
+
+    setCurrentDay(getCurrentDay());
+  }, []);
+
+  // handle submit function for submit event
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetchItem()
+    setCity("");
+  };
 
   return (
-    <div>
-     
-      <Input 
-        city={city}
-        setCity={setCity}
-        handleSubmit={handleSubmit}
-        outlet={outlet}
-        fetchItem={fetchItem}
-      />
-      
-      <Image />
-
-     <WeatherNotify 
-        outlet={outlet}
-      />
-
-     </div>
-  
-  
+    <div className="container outer">
+      <div className="inner">
+        <Input
+          city={city}
+          setCity={setCity}
+          handleSubmit={handleSubmit}
+          outlet={outlet}
+          fetchItem={fetchItem}
+          currentDay={currentDay}
+        />
+      </div>
+    </div>
   );
 }
 
