@@ -18,6 +18,8 @@
   align-items: center;
   background-color: white;
   width: 250;
+  height: 100vh;
+
 }
 
 .big-temp {
