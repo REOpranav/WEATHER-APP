@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Input from "./Input";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import {useCbTexts, useCbStatus } from 'configbee-react'
 
 function App() {
   const key = "e7a5e6824ab7d08351501ac5e7ba440b";
@@ -11,6 +12,10 @@ function App() {
   const [city, setCity] = useState(""); // this code for set city
 
   const [outlet, setOutlet] = useState(""); // this is for getting data from input
+
+  const {colorbutton} = useCbTexts()
+  const cbStatus = useCbStatus()
+
 
   const fetchItem = async () => {
     //using axios method
@@ -52,9 +57,16 @@ function App() {
     fetchItem()
     setCity("");
   };
+  
+  if (cbStatus !== "ACTIVE") {
+    return <p>loading...</p>
+  }
 
+  
   return (
-    <div className="container outer">
+    <>
+    
+    <div className="container outer" style={{backgroundColor :`${colorbutton}`}}>
       <div className="inner">
         <Input
           city={city}
@@ -66,6 +78,8 @@ function App() {
         />
       </div>
     </div>
+    
+    </>
   );
 }
 

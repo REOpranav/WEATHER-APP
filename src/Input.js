@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import {useCbTexts , useCbFlags } from 'configbee-react'
 
 const Input = ({
   handleSubmit,
@@ -50,6 +51,9 @@ const Input = ({
   useEffect(() => {
     tempe();
   }, [outlet, setTemperature]); //  'outlet' in  dependency in useEffect
+  
+  const {mainbutton:buttonName , colorbutton}  = useCbTexts()
+  const {isloading} = useCbFlags()
 
   return (
     <div className="container  input-container">
@@ -64,6 +68,7 @@ const Input = ({
           onChange={(e) => setCity(e.target.value)}
           placeholder="Enter city Name "
         />
+ 
         {/* submit button */}
         <div class="d-grid gap-2 col-12">
           <button
@@ -71,7 +76,7 @@ const Input = ({
             type="button"
             onClick={fetchItem}
           >
-            Button
+              {isloading === true ? buttonName : 'vadivel' } {/*this line in configbee */}
           </button>
         </div>
       </form>
@@ -99,7 +104,7 @@ const Input = ({
       <div class="container detail">
         {/* this is for getting humudity */}
 
-        <p className="lead">
+        <p className="lead" >
           humidity{" "}
           {outlet && (
             <span className="lead">
