@@ -60,7 +60,8 @@ function App() {
   };
   
   if (cbStatus !== "ACTIVE") {
-    return <p><LoadingOutlined /></p>
+    // return <p style={{color:'red'}}><LoadingOutlined /></p>
+     return <p> loading </p>
   }
 
   
