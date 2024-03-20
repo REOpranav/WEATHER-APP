@@ -58,9 +58,9 @@ function App() {
     setCity("");
   };
   
-  if (cbStatus !== "ACTIVE") {
-    return <p>loading...</p>
-  }
+  // if (cbStatus !== "ACTIVE") {
+  //   return <p>loading...</p>
+  // }
 
   
   return (
