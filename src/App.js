@@ -5,7 +5,7 @@ import Input from "./Input";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import {useCbTexts, useCbStatus } from 'configbee-react'
-import LoadingOutlined from '@ant-design/icons'
+import { LoadingOutlined } from "@ant-design/icons";
 
 function App() {
   const key = "e7a5e6824ab7d08351501ac5e7ba440b";
