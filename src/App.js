@@ -59,9 +59,9 @@ function App() {
     setCity("");
   };
   
-  // if (cbStatus !== "ACTIVE") {
-  //   return <p style={{color:'red'}}><LoadingOutlined /></p>
-  // }
+  if (cbStatus !== "ACTIVE") {
+    return <p style={{color:'red'}}><LoadingOutlined /></p>
+  }
 
   
   return (
