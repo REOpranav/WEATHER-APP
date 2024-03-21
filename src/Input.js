@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import {useCbTexts , useCbFlags } from 'configbee-react'
 
+
 const Input = ({
   handleSubmit,
   fetchItem,
