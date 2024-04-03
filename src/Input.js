@@ -133,11 +133,6 @@ const Input = ({
       <div className="day">
         <h1 class="lead display-6 "> {currentDay}</h1>
       </div>
-
-      <div>
-        <p>{process.env.REACT_APP_API_KEY}</p>
-         <p>some</p>
-      </div>
     </div>
   );
 };
