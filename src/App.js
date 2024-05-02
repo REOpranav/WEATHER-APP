@@ -9,11 +9,11 @@ import { LoadingOutlined } from "@ant-design/icons";
 
 function App() {
   const key = "e7a5e6824ab7d08351501ac5e7ba440b";
-  const [city, setCity] = useState(""); // this code for set city
   const [outlet, setOutlet] = useState(""); // this is for getting data from input
-  const {colorbutton} = useCbTexts()
-  const cbStatus = useCbStatus()
-  const {search} = useCbTexts()
+  const {colorbutton} = useCbTexts() //confgbee
+  const cbStatus = useCbStatus()//configbee
+  const {search} = useCbTexts() // configbee
+  console.log(search);
   
   const fetchItem = async () => {
     //using axios method
@@ -21,10 +21,9 @@ function App() {
       const responce = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=imperial&appid=${key}`
       );
-      let final = setOutlet(responce.data); // ste that data in setoutlet variable
-      console.log(final);
+      setOutlet(responce.data); // set that data in setoutlet variable
     } catch (err) {
-      alert("plse enter city name properly");
+       console.log(err.message);
     }
   };
 
@@ -49,7 +48,6 @@ function App() {
 
     setCurrentDay(getCurrentDay());
   }, []);
-
 
   useEffect(()=>{
     fetchItem()
