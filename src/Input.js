@@ -5,10 +5,7 @@ import {useCbTexts , useCbFlags } from 'configbee-react'
 
 
 const Input = ({
-  handleSubmit,
   fetchItem,
-  city,
-  setCity,
   outlet,
   currentDay,
 }) => {
@@ -58,30 +55,6 @@ const Input = ({
 
   return (
     <div className="container  input-container">
-      <form onSubmit={handleSubmit}>
-        {" "}
-        {/* onsubmitting */}
-        <input
-          type="text"
-          name="city"
-          id="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          placeholder="Enter city Name "
-        />
- 
-        {/* submit button */}
-        <div class="d-grid gap-2 col-12">
-          <button
-            class="btn btn-primary submit"
-            type="button"
-            onClick={fetchItem}
-          >
-              {isloading === true ? buttonName : 'vadivel' } {/*this line in configbee */}
-          </button>
-        </div>
-      </form>
-
       {/* this is for temperature image  */}
       <div className="image">
         <img
