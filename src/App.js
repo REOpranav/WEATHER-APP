@@ -13,7 +13,6 @@ function App() {
   const {colorbutton} = useCbTexts() //confgbee
   const cbStatus = useCbStatus()//configbee
   const {search} = useCbTexts() // configbee
-  console.log(search);
   
   const fetchItem = async () => {
     //using axios method
@@ -50,11 +49,11 @@ function App() {
   }, []);
 
   useEffect(()=>{
-    fetchItem()
+      fetchItem()
   },[search])
 
   if (cbStatus !== "ACTIVE") {
-    return <p style={{color:'red'}}><LoadingOutlined /></p>
+    return <p className="loading"><LoadingOutlined /></p>
   }
 
   

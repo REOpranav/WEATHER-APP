@@ -66,3 +66,15 @@ input {
   justify-content: center;
   margin-bottom: 10px;
 }
+
+
+.loading{
+    color: black;
+    border: 1px solid black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
